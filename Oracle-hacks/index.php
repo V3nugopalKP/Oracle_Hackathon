@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .header {
+            background-color: #9a1445;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+        }
+        
+        .logo-text-container {
+            display: flex;
+            align-items: center;
+        }
+        .site-name {
+            font-size: 24px;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .site-overview {
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .cta-button {
+            display: block;
+            width: 180px;
+            padding: 16px 24px;
+            margin: 0 auto;
+            background-color: #9a1445;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #7c0d36;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section-heading {
+            font-size: 28px;
+            color: #9a1445;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .feature-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 20px;
+        }
+
+        .feature-content {
+            max-width: 600px;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background-color: #9a1445;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .image-slider {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .slider-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-image {
+            flex: 0 0 100%;
+            max-width: 100%;
+            display: block;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #9a1445;
+            cursor: pointer;
+        }
+
+        .slider-arrow.prev {
+            left: 20px;
+        }
+
+        .slider-arrow.next {
+            right: 20px;
+        }
+        .login-button {
+            background-color: #fff;
+            color: #9a1445;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #9a1445;
+            color: #fff;
+        }
+        .login-button a {
+        color: #9a1445;
+        text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-text-container">
+            <img class="logo" src="logo_index.png" alt="Secure Oracle Logo">
+            <h1 class="site-name">S3cure Oracle</h1>
+        </div>
+      <button class="login-button"><a href="login.php">Login</a></button>
+    </header>
+    </header>
+    <div class="image-slider">
+        <div class="slider-images">
+            <img class="slider-image" src="slide_image_1.jpg" alt="Slider Image 1">
+            <img class="slider-image" src="slide_image_2.jpg" alt="Slider Image 2">
+            <img class="slider-image" src="slide_image_3.jpg" alt="Slider Image 3">
+        </div>
+        <div class="slider-arrow prev" onclick="prevSlide()">&#10094;</div>
+        <div class="slider-arrow next" onclick="nextSlide()">&#10095;</div>
+    </div>
+   
+
+    <div class="container">
+        <div class="site-overview">
+            <p>Secure Oracle is your trusted password manager that ensures your passwords are securely stored and easily accessible whenever you need them. Never worry about forgetting passwords again!</p>
+            <a href="login.php" class="cta-button">Log In</a>
+        </div>
+
+        <section>
+            <h2 class="section-heading">Features</h2>
+
+            <div class="feature-box">
+                <img class="feature-icon" src="feature_icon_1.png" alt="Feature Icon">
+                <div class="feature-content">
+                    <div class="feature-title">Secure Password Storage</div>
+                    <div class="feature-description">Securely store all your passwords in one place, protected by advanced encryption algorithms.</div>
+                </div>
+            </div>
+
+            <div class="feature-box">
+                <img class="feature-icon" src="feature_icon_2.png" alt="Feature Icon">
+                <div class="feature-content">
+                    <div class="feature-title">Easy Password Management</div>
+                    <div class="feature-description">Effortlessly manage and organize your passwords for different accounts and websites.</div>
+                </div>
+            </div>
+
+            <div class="feature-box password-generator">
+                <img class="feature-icon" src="generate_icon.png" alt="Generate Icon">
+                <div class="feature-content">
+                    <div class="feature-title">Password Generator</div>
+                    <div class="feature-description">Generate strong and unique passwords with our built-in password generator.</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        &copy; 2023 Secure Oracle. All rights reserved.
+    </footer>
+    <script>
+        // Image slider functionality
+        let currentSlide = 0;
+        const sliderImages = document.querySelector('.slider-images');
+        const sliderImageWidth = document.querySelector('.slider-image').clientWidth;
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + 3) % 3;
+            updateSlidePosition();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % 3;
+            updateSlidePosition();
+        }
+
+        function updateSlidePosition() {
+            sliderImages.style.transform = `translateX(-${currentSlide * sliderImageWidth}px)`;
+        }
+
+        // Automatically change slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
+</html>
